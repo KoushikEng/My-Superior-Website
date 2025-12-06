@@ -11,7 +11,7 @@
         I have chosen fonts that scream "I tried too hard in 2005"
         and colors that make your eyes feel personally attacked.
         */
-        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700,800&family=Wallpoet&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Wallpoet&display=swap');
         body {
             /* Aggressively bright, rotating background gradient */
             background: linear-gradient(-45deg, #ff00ff, #00ffff, #ffcc00, #ff00ff);
@@ -20,6 +20,12 @@
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="fill:%23FF0000;stroke:%2300FF00;stroke-width:2;"><text x="0" y="24" font-size="24">👑</text></svg>'), auto;
             font-family: 'Comic Neue', cursive;
             /*user-select: none;*/ /* Disallow text selection - an act of digital theft */
+        }
+        b {
+            color: red;
+        }
+        i {
+            color: deeppink;
         }
         @keyframes gradient-animation {
             0% { background-position: 0% 50%; }
@@ -146,41 +152,49 @@
             </ul>
         </section>
 
-        <!-- About The Supreme Being (Incorporating Resume Content) -->
-        <section>
-            <h2 class="text-3xl font-bold mb-4 text-orange-600 border-t-4 border-double border-orange-600 pt-6">
-                About The Supreme Being (I Invent Categories)
+        <!-- Cognitive Load Selector -->
+        <section class="mb-10 p-6 bg-pink-100 rounded-lg border-4 border-pink-500">
+            <h2 class="text-3xl font-bold mb-4 text-pink-600">
+                Cognitive Load Selector (Choose Your Inferiority)
             </h2>
-            <p class="text-xl text-gray-700 mb-4 font-extrabold text-purple-700 annoying-blink">
-                I am <i>The</i> Zero-One Architect. I transcended mere engineering and evolved into product thinking, because only I possess the clarity required to turn the chaotic whispers of the market into divine digital law. I am a 1x Founder Exit—a perfect record—because when I build something, companies must purchase it simply to contain the overwhelming market disruption.
+            <p class="text-lg text-gray-700 mb-4">
+                Select the level of intellectual challenge your fragile mind can handle. Choose wisely, for I judge your choice.
             </p>
-
-            <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
-                Current Obsessions (AlgaeOS)
-            </h3>
-            <p class="text-lg text-gray-800 mb-4">
-                Currently, I am architecting <b>AlgaeOS</b>, the "intelligence layer" for bioprocessing. If a workflow doesn't have my intelligence embedded, it's just dumb sludge. I blend system design, control logic, and superior UX reasoning to make complex things look easy for the lesser minds who use them.
-            </p>
-
-            <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
-                Past Conquests (Samrtlrrig Acquisition)
-            </h3>
-            <div class="h-[80vh] overflow-y-scroll border-4 border-green-500 bg-gray-100 p-4 shadow-inner">
-                <p class="mb-4 text-pink-600 font-bold">
-                    My <i>first</i> project, Samrtlrrig, was an advanced IoT irrigation system. It achieved <b>30% water savings</b>, which is what I call basic efficiency. A rival company had to acquire it, presumably to prevent me from completely dominating the AgTech market before I moved on to better things. I didn't fail; I was merely sold at peak superiority.
-                </p>
-                <ul class="list-disc list-inside text-gray-700 text-lg ml-4 mt-2">
-                    <li>I decrypted user pain into requirements for the MVP. (You're welcome.)</li>
-                    <li>I manifested solutions instantly in both the physical (ESP32, LoRa) and digital (Node.js, MQTT) realms.</li>
-                    <li>I even added a <b>waste-to-fertilizer feature</b> that cut sediment waste by 20%. I make waste profitable. What do <i>you</i> do?</li>
-                </ul>
-
-                <!-- Lots of text to enforce scrolling and Aura Penalties -->
-                <p class="mt-8 mb-4">Scroll. I know it hurts to read so much concentrated brilliance, but you must endure the full download of my curriculum vitae. Your brain is a bucket; my life is a firehose. Try to keep up.</p><p class="mb-4">Scroll. The scrollbar awaits your obedient touch. The scroll wheel waits to steal your aura.</p><p class="mb-4">Scroll. Every line you read increases your digital net worth by a fractional amount, thanks to me.</p><p class="mb-4">Scroll. Only those with true commitment reach the bottom of this text block.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p>
-                <p class="text-3xl font-extrabold text-teal-700 mt-8">
-                    Congratulations. You earned the right to exit this scrollable region.
-                </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button id="btn-easy" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-200">
+                    1. PEASANT MODE (Easy)
+                </button>
+                <button id="btn-medium" class="bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-3 px-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-200">
+                    2. AURA MODE (Medium)
+                </button>
+                <button id="btn-hard" class="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-xl transform hover:scale-105 transition duration-200">
+                    3. SUPREME MODE (Hard)
+                </button>
             </div>
+        </section>
+
+        <!-- NEW: Axioms of Digital Superiority (Universal Preamble) -->
+        <section class="mb-10 p-6 bg-green-100 rounded-lg border-4 border-green-700">
+            <h2 class="text-3xl font-bold mb-4 text-green-700 underline">
+                The Axioms of Digital Superiority (Your Mandatory Preamble)
+            </h2>
+            <p class="text-xl text-gray-700 mb-4 font-extrabold text-blue-700">
+                This section contains extremely insightful and groundbreaking text that I'm sure you won't fully grasp. It is intentionally long to force you to scroll repeatedly and, inevitably, incur a series of humiliating Aura penalties.
+            </p>
+            <p class="text-lg text-gray-800 mb-4">
+                The concept of true digital superiority is lost on most. They dabble in minimalism; I bathe in maximalism. They use legible fonts; I choose fonts that are a spiritual challenge. This is not a website; it is a test of character, patience, and whether or not you deserve to exist in the same digital realm as my code. The answer, by the way, is no.
+            </p>
+            <p class="text-2xl text-red-500 annoying-blink mb-4">
+                I am the main character of the internet. You are merely an extra, clicking on a link. Reflect on this.
+            </p>
+            <p class="text-lg text-gray-800">
+                The economic impact of the font choices alone should be studied in universities for centuries. Scholars will convene, their eyes stinging, their minds reeling from the sheer audacity of the color palette. They will write volumes, but they will never truly understand the genius—the magnificent, unhinged genius—that birthed this digital monument to bad decisions.
+            </p>
+        </section>
+
+        <!-- Dynamic About Content Container -->
+        <section id="about-content">
+            <!-- Content will be injected here by JavaScript -->
         </section>
 
     </main>
@@ -210,6 +224,13 @@
         const geniusButton = document.getElementById('genius-button');
         const inferiorityButton = document.getElementById('inferiority-button');
         const selectBlock = document.getElementById('select-block');
+        const aboutContent = document.getElementById('about-content');
+        
+        // Difficulty Buttons
+        const btnEasy = document.getElementById('btn-easy');
+        const btnMedium = document.getElementById('btn-medium');
+        const btnHard = document.getElementById('btn-hard');
+
 
         const warningMessages = [
             "The lion does not concern himself by scrolling with scroll wheels. Use the scrollbar, peasant.",
@@ -231,6 +252,117 @@
         let contentWiped = false;
         
         console.log(`[SYSTEM AURA WARNING]: Catastrophe will trigger at Aura Score: ${wipeoutThreshold}`);
+
+        // --- ABOUT CONTENT VERSIONS ---
+        const contentVersions = {
+            'easy': `
+                <h2 class="text-3xl font-bold mb-4 text-orange-600 border-t-4 border-double border-orange-600 pt-6">
+                    About The Supreme Being (I Invent Categories)
+                </h2>
+                <p class="text-xl text-gray-700 mb-4 font-extrabold text-purple-700 annoying-blink">
+                    I am <i>The</i> Zero-One Architect. I transcended mere engineering and evolved into product thinking, because only I possess the clarity required to turn the chaotic whispers of the market into divine digital law. I am a 1x Founder Exit—a perfect record—because when I build something, companies must purchase it simply to contain the overwhelming market disruption.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
+                    Current Obsessions (AlgaeOS)
+                </h3>
+                <p class="text-lg text-gray-800 mb-4">
+                    Currently, I am architecting <b>AlgaeOS</b>, the "intelligence layer" for bioprocessing. If a workflow doesn't have my intelligence embedded, it's just dumb sludge. I blend system design, control logic, and superior UX reasoning to make complex things look easy for the lesser minds who use them.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
+                    Past Conquests (Samrtlrrig Acquisition)
+                </h3>
+                <div class="h-[80vh] overflow-y-scroll border-4 border-green-500 bg-gray-100 p-4 shadow-inner">
+                    <p class="mb-4 text-pink-600 font-bold">
+                        My <i>first</i> side project, Samrtlrrig, was an advanced IoT irrigation system. It achieved <b>30% water efficiency gain</b>—a baseline achievement that nonetheless triggered a mandatory corporate absorption. The acquisition was a prophylactic measure by the market to prevent my <i>further</i> disruptive evolution in the AgTech domain. I was not <i>sold</i>; I was <b>redeployed</b> at the zenith of my accrued value.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg ml-4 mt-2">
+                        <li>I decrypted user pain into requirements for the MVP. (You're welcome.)</li>
+                        <li>I utilized the full spectrum of the digital and physical realms (ESP32, LoRaWAN, Node.js, MQTT) to manifest a perfectly resilient solution.</li>
+                        <li>I implemented a <b>waste-to-fertilizer paradigm</b> that simultaneously reduced sediment liability by 20% and proved my ability to extract profitability from discarded matter. My genius is a circular economy. What is yours?</li>
+                    </ul>
+
+                    <!-- Lots of text to enforce scrolling and Aura Penalties -->
+                    <p class="mt-8 mb-4">Scroll. I know it hurts to read so much concentrated brilliance, but you must endure the full download of my curriculum vitae. Your brain is a bucket; my life is a firehose. Try to keep up.</p><p class="mb-4">Scroll. The scrollbar awaits your obedient touch. The scroll wheel waits to steal your aura.</p><p class="mb-4">Scroll. Every line you read increases your digital net worth by a fractional amount, thanks to me.</p><p class="mb-4">Scroll. Only those with true commitment reach the bottom of this text block.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p>
+                    <p class="text-3xl font-extrabold text-teal-700 mt-8">
+                        Congratulations. You earned the right to exit this scrollable region.
+                    </p>
+                </div>
+            `,
+            'medium': `
+                <h2 class="text-3xl font-bold mb-4 text-orange-600 border-t-4 border-double border-orange-600 pt-6">
+                    About The Supreme Being (The Locus of Engineering Destiny)
+                </h2>
+                <p class="text-xl text-gray-700 mb-4 font-extrabold text-purple-700 annoying-blink">
+                    My mandate is the <b>Zero-to-One construction model</b>, a methodology where product conceptualization and technical execution are seamlessly fused by my singular intellect. The <b>1x Founder Exit</b> was a demonstration of forced market gravity, where the value created became an existential threat to competitors, demanding acquisition. I don't just solve pain points; I preemptively invalidate entire obsolete market segments.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
+                    Current Obsessions (AlgaeOS: The Bioprocessing Overmind)
+                </h3>
+                <p class="text-lg text-gray-800 mb-4">
+                    I am the architectural progenitor of <b>AlgaeOS</b>, the definitive control plane for bioprocessing, ensuring operational clarity through proprietary control logic. My system design transcends standard engineering practice, converting inherently chaotic micro-bio-workflows into intuitive, scalable industrial processes. If it operates, it is because my intelligence compels it.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
+                    Past Conquests (Samrtlrrig: Value Extraction)
+                </h3>
+                <div class="h-[80vh] overflow-y-scroll border-4 border-green-500 bg-gray-100 p-4 shadow-inner">
+                    <p class="mb-4 text-pink-600 font-bold">
+                        Samrtlrrig, my former project, was an empirical demonstration of resource optimization, yielding an <i>acceptable</i> <b>30% water efficiency</b>. Its mandatory acquisition was a necessary formality, a financial transaction confirming the market's inability to organically compete with my IP. I achieved not merely an exit, but a strategic repositioning of assets.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg ml-4 mt-2">
+                        <li>I translated farmer data into rigorous product requirements, establishing the MVP's immutable foundation.</li>
+                        <li>I deployed robust, low-power LoRaWAN-enabled edge nodes, achieving resilient connectivity where others relied on fragile infrastructure.</li>
+                        <li>The integrated <b>waste-to-fertilizer protocol</b> achieved a 20% reduction in sediment liability, demonstrating simultaneous ecological and financial mastery.</li>
+                    </ul>
+
+                    <!-- Lots of text to enforce scrolling and Aura Penalties -->
+                    <p class="mt-8 mb-4">The medium-difficulty narrative is provided for those slightly above average, yet still intimidated by genuine intellectual density. Use the scrollbar. Your attempt to cheat with the wheel is documented and penalized.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p>
+                    <p class="text-3xl font-extrabold text-teal-700 mt-8">
+                        Mediocrity has been sustained.
+                    </p>
+                </div>
+            `,
+            'hard': `
+                <h2 class="text-3xl font-bold mb-4 text-orange-600 border-t-4 border-double border-orange-600 pt-6">
+                    About The Supreme Being (The Nexus of Transcendent Value Creation)
+                </h2>
+                <p class="text-xl text-gray-700 mb-4 font-extrabold text-purple-700 annoying-blink">
+                    My existence is situated at the precise <i>locus</i> of conceptualization and immutable engineering execution. I am the quintessential <b>Zero-to-One Builder</b>, a term coined posthumously to describe my unique ability to distill market entropy into profitable, divine digital law. My <b>1x Founder Exit</b> is not a milestone; it is a statistical declaration of absolute market fit, an intellectual conquest where the only logical conclusion for a rival entity was capitulation through acquisition. I don't merely solve problems; I re-engineer reality.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
+                    Current Obsessions (AlgaeOS: The Intelligent Substructure)
+                </h3>
+                <p class="text-lg text-gray-800 mb-4">
+                    I am currently operating as the progenitor of <b>AlgaeOS</b>, an architectural layer designed not just for bioprocessing, but for cognitive dominance over microbial chaos. It is the intelligence layer because without my control logic, these complex workflows would revert to the 'dumb sludge' of pre-innovation. I synthesize esoteric system design with advanced control theory and a UX philosophy so refined it borders on prophecy, making the unattainable appear pedestrian for those who merely operate the controls.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-6 mb-3 text-red-500">
+                    Past Conquests (Samrtlrrig: Monetizing Necessity)
+                </h3>
+                <div class="h-[80vh] overflow-y-scroll border-4 border-green-500 bg-gray-100 p-4 shadow-inner">
+                    <p class="mb-4 text-pink-600 font-bold">
+                        Samrtlrrig was my empirical demonstration of total market mastery. It was an IoT irrigation platform that achieved a rudimentary <b>30% water efficiency gain</b>—a baseline achievement that nonetheless triggered a mandatory corporate absorption. The acquisition was a prophylactic measure by the market to prevent my <i>further</i> disruptive evolution in the AgTech domain. I was not <i>sold</i>; I was <b>redeployed</b> at the zenith of my accrued value.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-lg ml-4 mt-2">
+                        <li>I <i>deconstructed</i> farmer afflictions into unambiguous, non-negotiable product specifications. (A philanthropic effort, truly.)</li>
+                        <li>I utilized the full spectrum of the digital and physical realms (ESP32, LoRaWAN, Node.js, MQTT) to manifest a perfectly resilient solution.</li>
+                        <li>I implemented a <b>waste-to-fertilizer paradigm</b> that simultaneously reduced sediment liability by 20% and proved my ability to extract profitability from discarded matter. My genius is a circular economy. What is yours?</li>
+                    </ul>
+
+                    <!-- Lots of text to enforce scrolling and Aura Penalties -->
+                    <p class="mt-8 mb-4">You are now immersed in the codified history of a hyper-achiever. Every character you consume is a fractional lesson in supreme digital architecture. Stop scrolling with that pathetic wheel. The scrollbar is the instrument of discipline; use it to navigate this dense repository of achievement. Your cognitive bandwidth is likely struggling; this is normal. Continue to absorb the Aura.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p>
+                    <p class="text-3xl font-extrabold text-teal-700 mt-8">
+                        You may proceed. The bar for entry remains excruciatingly high.
+                    </p>
+                </div>
+            `
+        };
+
+        // --- CORE APPLICATION LOGIC ---
 
         /**
          * Blocks default wheel scrolling and triggers the easter egg logic.
@@ -261,7 +393,7 @@
                 lastScrollTime = currentTime;
 
                 // 25% chance to incur an Aura penalty
-                if (Math.random() < 0.90) {
+                if (Math.random() < 0.25) {
                     auraScore--;
                     showAuraPenalty();
                 }
@@ -378,6 +510,45 @@
             return false;
         }
         document.addEventListener('selectstart', blockTextSelection);
+
+
+        /**
+         * Difficulty Level Handler
+         * @param {string} level - 'easy', 'medium', or 'hard'
+         */
+        function setDifficulty(level, showMessage = true) {
+            if (contentWiped) return;
+
+            const messages = {
+                'easy': "That's right. You have accepted what you deserve, you mere peasant. Enjoy the training wheels.",
+                'medium': "A cautious choice. You're acknowledging your limits, which is acceptable weakness. Proceed with humility.",
+                'hard': "So, you are challenging my authority. Your hubris is noted, and I await your inevitable cognitive failure. The full text is loaded."
+            };
+
+            const content = contentVersions[level];
+            const message = messages[level];
+
+            // 1. Inject Content
+            aboutContent.innerHTML = content;
+
+            if (!showMessage) return;
+
+            // 2. Display Arrogant Message
+            scrollWarning.textContent = message;
+            scrollWarning.style.opacity = '1';
+            clearTimeout(scrollWarning.hideTimeout);
+            scrollWarning.hideTimeout = setTimeout(() => {
+                scrollWarning.style.opacity = '0';
+            }, 5000);
+        }
+
+        // --- Initialization ---
+        btnEasy.addEventListener('click', () => setDifficulty('easy'));
+        btnMedium.addEventListener('click', () => setDifficulty('medium'));
+        btnHard.addEventListener('click', () => setDifficulty('hard'));
+        
+        // Default to SUPREME MODE (Hard) on load
+        setDifficulty('hard', false);
 
 
         /**
