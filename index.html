@@ -11,7 +11,7 @@
         I have chosen fonts that scream "I tried too hard in 2005"
         and colors that make your eyes feel personally attacked.
         */
-        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Wallpoet&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700,800&family=Wallpoet&display=swap');
         body {
             /* Aggressively bright, rotating background gradient */
             background: linear-gradient(-45deg, #ff00ff, #00ffff, #ffcc00, #ff00ff);
@@ -19,6 +19,7 @@
             animation: gradient-animation 15s ease infinite;
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="fill:%23FF0000;stroke:%2300FF00;stroke-width:2;"><text x="0" y="24" font-size="24">👑</text></svg>'), auto;
             font-family: 'Comic Neue', cursive;
+            /*user-select: none;*/ /* Disallow text selection - an act of digital theft */
         }
         @keyframes gradient-animation {
             0% { background-position: 0% 50%; }
@@ -33,7 +34,7 @@
             animation: blink 0.5s step-end infinite alternate;
         }
         @keyframes blink {
-            50% { opacity: 0.1; }
+            55% { opacity: 0.1; }
         }
 
         /* Modal styling for the Aura penalties */
@@ -61,12 +62,37 @@
             border: 3px solid #000;
             border-radius: 0;
         }
+
+        .shake-element {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+
+        @keyframes shake {
+            10%, 90% {
+                transform: translate3d(-1px, 0, 0);
+            }
+            
+            20%, 80% {
+                transform: translate3d(2px, 0, 0);
+            }
+
+            30%, 50%, 70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+
+            40%, 60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen text-gray-800 p-4">
     
     <!-- The Cringe Header of Power -->
-    <header class="bg-black/80 text-neon-glow p-6 mb-8 border-4 border-yellow-300 shadow-xl fixed top-0 left-0 w-full z-10 text-center">
+    <header id="the-header" class="bg-black/80 text-neon-glow p-6 mb-8 border-4 border-yellow-300 shadow-xl fixed top-0 left-0 w-full z-10 text-center">
         <h1 class="text-4xl md:text-6xl text-yellow-300 annoying-blink">
             THE DIGITAL THRONE ROOM
         </h1>
@@ -84,13 +110,13 @@
                 A Message for the Plebeians (That's You)
             </h2>
             <p class="text-xl text-pink-600">
-                You're welcome. Simply existing in the same digital space as this genius website should be considered a privilege—a Masterclass in Design, if you will. I didn't make this for *you*. I made this because my brilliance simply couldn't be contained in mere spreadsheets. Read the content. Absorb the aura. Then leave.
+                You're welcome. Simply existing in the same digital space as this genius website should be considered a privilege—a Masterclass in Design, if you will. I didn't make this for <i>you</i>. I made this because my brilliance simply couldn't be contained in mere spreadsheets. Read the content. Absorb the aura. Then leave.
             </p>
             <div class="mt-4 flex justify-center space-x-4">
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform hover:scale-110 active:animate-bounce">
+                <button id="genius-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform hover:scale-110 active:animate-bounce">
                     100% Verified Genius
                 </button>
-                <button class="bg-green-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded-full shadow-lg transform hover:scale-110 active:animate-spin">
+                <button id="inferiority-button" class="bg-green-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded-full shadow-lg transform hover:scale-110 active:animate-spin">
                     Check Your Inferiority
                 </button>
             </div>
@@ -103,16 +129,19 @@
             </h2>
             <ul class="space-y-3 list-disc list-inside text-xl text-blue-600 bg-yellow-200 p-4 rounded-xl border-4 border-blue-600">
                 <li class="hover:text-red-900 transition duration-150">
-                    <span class="annoying-blink text-2xl mr-2">✨</span> **Ultra-Flashy Aesthetics:** Your browser is not worthy of this RGB brilliance.
+                    <span class="annoying-blink text-2xl mr-2">✨</span> <b>Ultra-Flashy Aesthetics:</b> Your browser is not worthy of this RGB brilliance.
                 </li>
                 <li class="hover:text-red-900 transition duration-150">
-                    <span class="annoying-blink text-2xl mr-2">📢</span> **Mandatory Font Choices:** If you don't like Comic Sans, your opinion is wrong.
+                    <span class="annoying-blink text-2xl mr-2">📢</span> <b>Mandatory Font Choices:</b> If you don't like Comic Sans, your opinion is wrong.
                 </li>
                 <li class="hover:text-red-900 transition duration-150">
-                    <span class="annoying-blink text-2xl mr-2">🚫</span> **Scroll Wheel Blockade:** I decide how you navigate. Use the scrollbar. It's called 'discipline.'
+                    <span class="annoying-blink text-2xl mr-2">🚫</span> <b>Scroll Wheel Blockade:</b> I decide how you navigate. Use the scrollbar. It's called 'discipline.'
                 </li>
                 <li class="hover:text-red-900 transition duration-150">
-                    <span class="annoying-blink text-2xl mr-2">📈</span> **Aura Penalty System:** Fail to comply and watch your life score drop.
+                    <span class="annoying-blink text-2xl mr-2">📈</span> <b>Aura Penalty System:</b> Fail to comply and watch your life score drop.
+                </li>
+                <li class="hover:text-red-900 transition duration-150">
+                    <span class="annoying-blink text-2xl mr-2">🚨</span> <b>Aura Catastrophe Mode:</b> Cross the secret threshold and lose all content. Total digital cleansing.
                 </li>
             </ul>
         </section>
@@ -149,6 +178,11 @@
     <div id="scroll-warning" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-900 text-yellow-300 p-3 rounded-xl border-4 border-red-600 shadow-2xl opacity-0 transition-opacity duration-300 pointer-events-none z-40 text-center w-full max-w-lg text-lg">
         <!-- Text injected by JS -->
     </div>
+    
+    <!-- Fixed Text Selection Block Message -->
+    <div id="select-block" class="fixed bottom-16 left-1/2 transform -translate-x-1/2 bg-blue-900 text-white p-3 rounded-xl border-4 border-yellow-300 shadow-2xl opacity-0 transition-opacity duration-300 pointer-events-none z-40 text-center w-full max-w-md text-base">
+        DO NOT STEAL MY WORDS. THEY ARE PROPRIETARY GENIUS.
+    </div>
 
     <!-- Fixed Aura Penalty Popup -->
     <div id="aura-popup" class="bg-red-800 text-white font-bold p-8 rounded-full border-8 border-yellow-300 shadow-red-500/50 shadow-2xl text-4xl text-center">
@@ -159,8 +193,13 @@
         // --- JAVASCRIPT MASTERCLASS IN ANNOYANCE ---
 
         const pageWrapper = document.getElementById('page-wrapper');
+        const theHeader = document.getElementById('the-header');
         const scrollWarning = document.getElementById('scroll-warning');
         const auraPopup = document.getElementById('aura-popup');
+        const geniusButton = document.getElementById('genius-button');
+        const inferiorityButton = document.getElementById('inferiority-button');
+        const selectBlock = document.getElementById('select-block');
+
         const warningMessages = [
             "The lion does not concern himself by scrolling with scroll wheels. Use the scrollbar, peasant.",
             "Put sum fucking effort and use the scrollbar.",
@@ -174,12 +213,21 @@
         let isAuraPenaltyPending = false;
         let lastScrollTime = 0;
         const penaltyCooldown = 1500; // 1.5 seconds between penalties
+        
+        // Aura Catastrophe Feature setup
+        const thresholds = [50, 60, 70];
+        const wipeoutThreshold = thresholds[Math.floor(Math.random() * thresholds.length)];
+        let contentWiped = false;
+        
+        console.log(`[SYSTEM AURA WARNING]: Catastrophe will trigger at Aura Score: ${wipeoutThreshold}`);
 
         /**
          * Blocks default wheel scrolling and triggers the easter egg logic.
          * @param {WheelEvent} e
          */
-        document.addEventListener('wheel', function(e) {
+        function wheelBlocker(e) {
+            if (contentWiped) return;
+
             const currentTime = Date.now();
 
             // 1. Block the scroll movement
@@ -202,7 +250,7 @@
                 lastScrollTime = currentTime;
 
                 // 25% chance to incur an Aura penalty
-                if (Math.random() < 0.25) {
+                if (Math.random() < 0.90) {
                     auraScore--;
                     showAuraPenalty();
                 }
@@ -212,27 +260,114 @@
                     isAuraPenaltyPending = false;
                 }, 100); // Small debounce
             }
-        }, { passive: false });
+        }
+        document.addEventListener('wheel', wheelBlocker, { passive: false });
 
         /**
-         * Shows the -1 Aura popup with a quick flash effect.
+         * Shows the -1 Aura popup with a quick flash effect and checks for wipeout.
          */
         function showAuraPenalty() {
             auraPopup.textContent = `-1 AURA. Current Aura: ${auraScore}`;
             auraPopup.classList.add('active'); // Show popup
 
-            // Vibrate the body (for a truly visceral cringe experience)
-            pageWrapper.style.transform = 'translateX(5px)';
+            // Vibrate the main content (fixed elements remain stable, as demanded)
+            pageWrapper.classList.add('shake-element');
             setTimeout(() => {
-                pageWrapper.style.transform = 'translateX(0)';
-            }, 50);
+                pageWrapper.classList.remove('shake-element');
+            }, 820);
 
+            // Check for Catastrophe
+            if (auraScore <= wipeoutThreshold && !contentWiped) {
+                wipePageContent();
+                return;
+            }
 
             // Hide the popup after 500ms
             setTimeout(() => {
                 auraPopup.classList.remove('active');
             }, 500);
         }
+
+        /**
+         * Clears all content when the Aura Catastrophe threshold is crossed.
+         */
+        function wipePageContent() {
+            contentWiped = true;
+            document.removeEventListener('wheel', wheelBlocker);
+            document.removeEventListener('selectstart', blockTextSelection);
+            
+            // Clear the main wrapper
+            pageWrapper.innerHTML = `
+                <div class="text-center p-20 bg-black/90 text-yellow-300 rounded-lg shadow-2xl">
+                    <h2 class="text-5xl font-bold text-red-600 annoying-blink">
+                        &#9888; CATASTROPHIC AURA FAILURE &#9888;
+                    </h2>
+                    <p class="text-3xl mt-6 text-yellow-300">
+                        Aura Score (${auraScore}) crossed the non-negotiable threshold (${wipeoutThreshold}).
+                        Your insufficient digital discipline has resulted in a Total Content Cleansing.
+                    </p>
+                    <p class="text-xl mt-4 text-gray-500">
+                        You were warned. Exit and reflect on your shortcomings.
+                    </p>
+                </div>
+            `;
+            // Redesign the header for maximum shame
+            theHeader.innerHTML = `
+                <h1 class="text-4xl md:text-6xl text-red-600 annoying-blink">
+                    FAILURE. THE DIGITAL THRONE IS EMPTY.
+                </h1>
+            `;
+            // Remove all warning boxes
+            scrollWarning.style.display = 'none';
+            selectBlock.style.display = 'none';
+            auraPopup.style.display = 'none';
+            
+            // Center the page wrapper properly
+            pageWrapper.style.position = 'fixed';
+            pageWrapper.style.top = '50%';
+            pageWrapper.style.left = '50%';
+            pageWrapper.style.transform = 'translate(-50%, -50%)';
+        }
+
+        /**
+         * Button Click Handlers
+         */
+        geniusButton.addEventListener('click', () => {
+             scrollWarning.textContent = "Correct. My genius is a statistical anomaly. Enjoy the privilege.";
+             scrollWarning.style.opacity = '1';
+             clearTimeout(scrollWarning.hideTimeout);
+             scrollWarning.hideTimeout = setTimeout(() => {
+                 scrollWarning.style.opacity = '0';
+             }, 3000);
+        });
+
+        inferiorityButton.addEventListener('click', () => {
+             auraScore = Math.max(1, auraScore - 5); // Massive penalty for checking your own inferiority
+             scrollWarning.textContent = `Confirmed. Your Aura just dropped by 5 points. Don't waste my time. Current Aura: ${auraScore}`;
+             scrollWarning.style.opacity = '1';
+             showAuraPenalty(); // Flash the penalty immediately
+             clearTimeout(scrollWarning.hideTimeout);
+             scrollWarning.hideTimeout = setTimeout(() => {
+                 scrollWarning.style.opacity = '0';
+             }, 3000);
+        });
+        
+        /**
+         * Text Selection Block Easter Egg
+         */
+        function blockTextSelection(e) {
+            e.preventDefault();
+            selectBlock.style.opacity = '1';
+            
+            // Hide the warning after 2 seconds
+            clearTimeout(selectBlock.hideTimeout);
+            selectBlock.hideTimeout = setTimeout(() => {
+                selectBlock.style.opacity = '0';
+            }, 2000);
+            return false;
+        }
+        document.addEventListener('selectstart', blockTextSelection);
+
 
         /**
          * Optional Easter Egg: Title Change on Tab/Window Focus Loss
