@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ALPHA & OMEGA DIGITAL HUB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /*
+        The only custom CSS allowed. It must be truly heinous.
+        I have chosen fonts that scream "I tried too hard in 2005"
+        and colors that make your eyes feel personally attacked.
+        */
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Wallpoet&display=swap');
+        body {
+            /* Aggressively bright, rotating background gradient */
+            background: linear-gradient(-45deg, #ff00ff, #00ffff, #ffcc00, #ff00ff);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="fill:%23FF0000;stroke:%2300FF00;stroke-width:2;"><text x="0" y="24" font-size="24">👑</text></svg>'), auto;
+            font-family: 'Comic Neue', cursive;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .text-neon-glow {
+            font-family: 'Wallpoet', cursive;
+            text-shadow: 0 0 5px #ff0000, 0 0 10px #ff00ff, 0 0 15px #00ffff, 0 0 20px #00ff00;
+        }
+        .annoying-blink {
+            animation: blink 0.5s step-end infinite alternate;
+        }
+        @keyframes blink {
+            50% { opacity: 0.1; }
+        }
+
+        /* Modal styling for the Aura penalties */
+        #aura-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.1s ease-out;
+            z-index: 50;
+        }
+        #aura-popup.active {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        /* Custom scrollbar to ensure users feel adequately superior when using it */
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffcc00;
+            border: 5px solid #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff00ff;
+            border: 3px solid #000;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800 p-4">
+    
+    <!-- The Cringe Header of Power -->
+    <header class="bg-black/80 text-neon-glow p-6 mb-8 border-4 border-yellow-300 shadow-xl fixed top-0 left-0 w-full z-10 text-center">
+        <h1 class="text-4xl md:text-6xl text-yellow-300 annoying-blink">
+            THE DIGITAL THRONE ROOM
+        </h1>
+        <p class="text-lg md:text-2xl text-red-500 mt-2">
+            You Have Entered the Domain of Superiority. Scroll Appropriately.
+        </p>
+    </header>
+    
+    <!-- Main Content Area - Aggressively Centered and Large -->
+    <main id="page-wrapper" class="mt-40 max-w-4xl mx-auto bg-white/90 p-8 md:p-12 rounded-lg shadow-2xl border-8 border-red-500 transition duration-500 hover:scale-[1.01] mb-12">
+
+        <!-- Arrogant Welcome Section -->
+        <section class="mb-10 border-b-4 border-dashed border-purple-500 pb-6">
+            <h2 class="text-3xl font-bold mb-4 text-purple-600 underline">
+                A Message for the Plebeians (That's You)
+            </h2>
+            <p class="text-xl text-pink-600">
+                You're welcome. Simply existing in the same digital space as this genius website should be considered a privilege—a Masterclass in Design, if you will. I didn't make this for *you*. I made this because my brilliance simply couldn't be contained in mere spreadsheets. Read the content. Absorb the aura. Then leave.
+            </p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transform hover:scale-110 active:animate-bounce">
+                    100% Verified Genius
+                </button>
+                <button class="bg-green-500 hover:bg-green-700 text-black font-bold py-2 px-4 rounded-full shadow-lg transform hover:scale-110 active:animate-spin">
+                    Check Your Inferiority
+                </button>
+            </div>
+        </section>
+
+        <!-- Feature List (Overly Dramatic) -->
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold mb-4 text-red-600">
+                Features That Define Perfection
+            </h2>
+            <ul class="space-y-3 list-disc list-inside text-xl text-blue-600 bg-yellow-200 p-4 rounded-xl border-4 border-blue-600">
+                <li class="hover:text-red-900 transition duration-150">
+                    <span class="annoying-blink text-2xl mr-2">✨</span> **Ultra-Flashy Aesthetics:** Your browser is not worthy of this RGB brilliance.
+                </li>
+                <li class="hover:text-red-900 transition duration-150">
+                    <span class="annoying-blink text-2xl mr-2">📢</span> **Mandatory Font Choices:** If you don't like Comic Sans, your opinion is wrong.
+                </li>
+                <li class="hover:text-red-900 transition duration-150">
+                    <span class="annoying-blink text-2xl mr-2">🚫</span> **Scroll Wheel Blockade:** I decide how you navigate. Use the scrollbar. It's called 'discipline.'
+                </li>
+                <li class="hover:text-red-900 transition duration-150">
+                    <span class="annoying-blink text-2xl mr-2">📈</span> **Aura Penalty System:** Fail to comply and watch your life score drop.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Deep, Meaningful Content (Placeholder) -->
+        <section>
+            <h2 class="text-3xl font-bold mb-4 text-orange-600 border-t-4 border-double border-orange-600 pt-6">
+                My Wisdom, Your Confusion
+            </h2>
+            <p class="text-xl text-gray-700 mb-4">
+                This section contains extremely insightful and groundbreaking text that I'm sure you won't fully grasp. It is intentionally long to force you to scroll repeatedly and, inevitably, incur a series of humiliating Aura penalties.
+            </p>
+            <div class="h-[80vh] overflow-y-scroll border-4 border-green-500 bg-gray-100 p-4 shadow-inner">
+                <p class="mb-4">
+                    The concept of true digital superiority is lost on most. They dabble in minimalism; I bathe in maximalism. They use legible fonts; I choose fonts that are a spiritual challenge. This is not a website; it is a test of character, patience, and whether or not you deserve to exist in the same digital realm as my code. The answer, by the way, is no.
+                </p>
+                <p class="mb-4 text-2xl text-red-500 annoying-blink">
+                    I am the main character of the internet. You are merely an extra, clicking on a link. Reflect on this.
+                </p>
+                <p class="mb-4">
+                    The economic impact of the font choices alone should be studied in universities for centuries. Scholars will convene, their eyes stinging, their minds reeling from the sheer audacity of the color palette. They will write volumes, but they will never truly understand the genius—the magnificent, unhinged genius—that birthed this digital monument to bad decisions.
+                </p>
+                <!-- Lots of text to enforce scrolling -->
+                <p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p><p class="mb-4">Scroll.</p>
+                <p class="text-3xl font-extrabold text-teal-700 mt-8">
+                    Keep going. The effort is noted (and probably inadequate).
+                </p>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Fixed Warning Box for Scroll Wheel Users -->
+    <div id="scroll-warning" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-900 text-yellow-300 p-3 rounded-xl border-4 border-red-600 shadow-2xl opacity-0 transition-opacity duration-300 pointer-events-none z-40 text-center w-full max-w-lg text-lg">
+        <!-- Text injected by JS -->
+    </div>
+
+    <!-- Fixed Aura Penalty Popup -->
+    <div id="aura-popup" class="bg-red-800 text-white font-bold p-8 rounded-full border-8 border-yellow-300 shadow-red-500/50 shadow-2xl text-4xl text-center">
+        -1 AURA
+    </div>
+
+    <script>
+        // --- JAVASCRIPT MASTERCLASS IN ANNOYANCE ---
+
+        const pageWrapper = document.getElementById('page-wrapper');
+        const scrollWarning = document.getElementById('scroll-warning');
+        const auraPopup = document.getElementById('aura-popup');
+        const warningMessages = [
+            "The lion does not concern himself by scrolling with scroll wheels. Use the scrollbar, peasant.",
+            "Put sum fucking effort and use the scrollbar.",
+            "Using a scroll wheel loses aura. Real men use the scrollbar.",
+            "Your digital work ethic is weak. Scrollbar. Now.",
+            "Scroll wheels are for amateurs. I expect more.",
+            "Did you think this would be easy? -1 Scroll Wheel Points."
+        ];
+
+        let auraScore = 100;
+        let isAuraPenaltyPending = false;
+        let lastScrollTime = 0;
+        const penaltyCooldown = 1500; // 1.5 seconds between penalties
+
+        /**
+         * Blocks default wheel scrolling and triggers the easter egg logic.
+         * @param {WheelEvent} e
+         */
+        document.addEventListener('wheel', function(e) {
+            const currentTime = Date.now();
+
+            // 1. Block the scroll movement
+            e.preventDefault();
+
+            // 2. Show a random warning message
+            const randomMessage = warningMessages[Math.floor(Math.random() * warningMessages.length)];
+            scrollWarning.textContent = randomMessage;
+            scrollWarning.style.opacity = '1';
+
+            // Hide the warning after 1.5 seconds
+            clearTimeout(scrollWarning.hideTimeout);
+            scrollWarning.hideTimeout = setTimeout(() => {
+                scrollWarning.style.opacity = '0';
+            }, 1500);
+
+            // 3. Apply Aura Penalty
+            if (!isAuraPenaltyPending && (currentTime - lastScrollTime > penaltyCooldown)) {
+                isAuraPenaltyPending = true;
+                lastScrollTime = currentTime;
+
+                // 25% chance to incur an Aura penalty
+                if (Math.random() < 0.25) {
+                    auraScore--;
+                    showAuraPenalty();
+                }
+
+                // Reset after a short delay
+                setTimeout(() => {
+                    isAuraPenaltyPending = false;
+                }, 100); // Small debounce
+            }
+        }, { passive: false });
+
+        /**
+         * Shows the -1 Aura popup with a quick flash effect.
+         */
+        function showAuraPenalty() {
+            auraPopup.textContent = `-1 AURA. Current Aura: ${auraScore}`;
+            auraPopup.classList.add('active'); // Show popup
+
+            // Vibrate the body (for a truly visceral cringe experience)
+            pageWrapper.style.transform = 'translateX(5px)';
+            setTimeout(() => {
+                pageWrapper.style.transform = 'translateX(0)';
+            }, 50);
+
+
+            // Hide the popup after 500ms
+            setTimeout(() => {
+                auraPopup.classList.remove('active');
+            }, 500);
+        }
+
+        /**
+         * Optional Easter Egg: Title Change on Tab/Window Focus Loss
+         */
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = "WHY ARE YOU LEAVING? (COWARD)";
+            } else {
+                document.title = "THE ALPHA & OMEGA DIGITAL HUB";
+            }
+        });
+
+    </script>
+</body>
+</html>
